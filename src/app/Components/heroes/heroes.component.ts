@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '.../hero';
+
+// use '../../ ' to move up 2 levels in dir structure
+import { Hero } from '../../hero';
 
 @Component({
   selector: 'app-heroes',
