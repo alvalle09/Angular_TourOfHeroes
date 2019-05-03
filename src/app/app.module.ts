@@ -19,4 +19,5 @@ import { HeroDetailComponent } from './Components/hero-detail/hero-detail.compon
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
