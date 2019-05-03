@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HEROES } from '../../mock-heroes';
-
-
-
 // use '../../ ' to move up 2 levels in dir structure
+import { HEROES } from '../../mock-heroes';
 import { Hero } from '../../hero';
 import { TestBed } from '@angular/core/testing';
 
@@ -15,9 +12,8 @@ import { TestBed } from '@angular/core/testing';
 
 
 export class HeroesComponent implements OnInit {
-  
-  heroes =  HEROES;
 
+  heroes =  HEROES;
   selectedHero: Hero;
 
   constructor() {}
@@ -27,5 +23,5 @@ export class HeroesComponent implements OnInit {
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
-  
+
 }
