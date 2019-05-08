@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeroesComponent } from './Components/heroes/heroes.component';
+import { DashboardComponent } from '../app/Components/dashboard/dashboard.component';
+
 
 
 // Routes tell the router which view to display when a user clicks a link or pastes a URL into the browser address bar
 const routes: Routes = [
-  { path: 'heroes', component: HeroesComponent 
-  }
+  { path: '', redirectTo: './dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent},
+  { path: 'heroes', component: HeroesComponent  }
+  
 ];
 
 
