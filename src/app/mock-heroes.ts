@@ -1,7 +1,5 @@
 
-// mock heroes, hard-coded data for initial testing
-
-import { Hero } from './hero';
+import { Hero } from "./Hero.1";
 
 export const HEROES: Hero[] = [
     { id: 11, name: 'Mr. Nice' },

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // use '../../ ' to move up 2 levels in dir structure
 import { HEROES } from '../../mock-heroes';
-import { Hero } from '../../hero';
+import { Hero } from "../../Hero.1";
 import { HeroService } from '../../hero.service';
 
 import { TestBed } from '@angular/core/testing';
@@ -14,20 +14,12 @@ import { TestBed } from '@angular/core/testing';
 
 
 export class HeroesComponent implements OnInit {
-
   heroes: Hero[];
-  selectedHero: Hero;
 
-  constructor(private heroService: HeroService) {
-
-  }
+  constructor(private heroService: HeroService) {  }
 
   ngOnInit() {
     this.getHeroes();
-  }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
   }
 
   getHeroes(): void {
