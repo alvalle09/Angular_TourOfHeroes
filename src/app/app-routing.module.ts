@@ -5,9 +5,6 @@ import { DashboardComponent } from '../app/Components/dashboard/dashboard.compon
 import { HeroDetailComponent } from '../app/Components/hero-detail/hero-detail.component';
 
 
-
-
-
 // Routes tell the router which view to display when a user clicks a link or pastes a URL into the browser address bar
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -16,7 +13,6 @@ const routes: Routes = [
   { path: 'detail/:id', component: HeroDetailComponent }
   
 ];
-
 
 // exports array make router directives available foruse in AppModule components that need them
 @NgModule({  
