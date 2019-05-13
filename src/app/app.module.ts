@@ -2,12 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';  // <==NgModel lives here
 
+// Use Http module for comm over http
+import { HttpClientModule } from '@angular/common/http';
+// In-memory http api for intercepting http requests, for local dev simulating http calls
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+
+
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './Components/heroes/heroes.component';
 import { HeroDetailComponent } from './Components/hero-detail/hero-detail.component';
 import { MessagesComponent } from './Components/messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +28,11 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {dataEncapsulation: false}
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

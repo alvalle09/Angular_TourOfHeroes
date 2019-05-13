@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // use '../../ ' to move up 2 levels in dir structure
-import { HEROES } from '../../mock-heroes';
-import { Hero } from "../../Hero.1";
+import { Hero } from '../../Hero';
 import { HeroService } from '../../hero.service';
 
 import { TestBed } from '@angular/core/testing';

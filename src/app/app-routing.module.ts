@@ -11,16 +11,16 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'heroes', component: HeroesComponent  },
   { path: 'detail/:id', component: HeroDetailComponent }
-  
+
 ];
 
 // exports array make router directives available foruse in AppModule components that need them
-@NgModule({  
+@NgModule({
   // forRoot() method supplies the service providers and directives needed for routing
   imports: [ RouterModule.forRoot(routes) ],
 
   exports: [ RouterModule ]
-  
+
 })
 
 export class AppRoutingModule { }
